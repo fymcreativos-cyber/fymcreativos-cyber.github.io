@@ -1,246 +1,235 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F&M CREATIVOS | Impresiones y arte personalizado</title>
-<meta name="description" content="F&M CREATIVOS: impresiones a color, papel fotográfico y adhesivo, piñatería y creaciones personalizadas.">
-<style>
-:root {
-  --morado: #6c2bd9;
-  --fucsia: #ed168b;
-  --naranja: #ff851b;
-  --oscuro: #25133d;
-  --claro: #fff8ff;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #30243b;
-  background: var(--claro);
-  line-height: 1.6;
-}
-header {
-  background: white;
-  padding: 16px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 12px #35104a18;
-}
-.logo {
-  color: var(--morado);
-  font-size: 1.45rem;
-  font-weight: 900;
-}
-.logo span { color: var(--fucsia); }
-nav { display: flex; gap: 18px; flex-wrap: wrap; }
-nav a {
-  color: var(--oscuro);
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover { color: var(--fucsia); }
-.hero {
-  padding: 90px 7%;
-  text-align: center;
-  color: white;
-  background: linear-gradient(125deg, #5420b5, #e81789 65%, #ff851b);
-}
-.hero .etiqueta {
-  display: inline-block;
-  border: 1px solid #ffffff99;
-  padding: 5px 15px;
-  border-radius: 30px;
-}
-h1 {
-  font-size: clamp(2.4rem, 7vw, 4.5rem);
-  line-height: 1.08;
-  margin: 20px 0;
-}
-.hero p { max-width: 700px; margin: 0 auto 28px; font-size: 1.15rem; }
-.boton {
-  display: inline-block;
-  background: white;
-  color: var(--morado);
-  padding: 13px 22px;
-  margin: 5px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.boton.secundario { background: var(--oscuro); color: white; }
-section { padding: 65px 7%; }
-.titulo { text-align: center; margin-bottom: 35px; }
-.titulo h2 { color: var(--morado); font-size: 2.1rem; margin-bottom: 5px; }
-.titulo p { margin-top: 0; }
-.servicios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-.tarjeta {
-  background: white;
-  border-radius: 18px;
-  padding: 25px;
-  box-shadow: 0 5px 22px #35104a12;
-  border-bottom: 4px solid var(--fucsia);
-}
-.tarjeta:nth-child(2n) { border-color: var(--naranja); }
-.tarjeta .emoji { font-size: 2.5rem; }
-.tarjeta h3 { color: var(--morado); margin-bottom: 8px; }
-.galeria {
-  background: #f1e8ff;
-}
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 18px;
-}
-.muestra {
-  min-height: 170px;
-  border-radius: 16px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: white;
-  box-shadow: 0 4px 15px #35104a12;
-}
-.muestra span { font-size: 3rem; }
-.muestra strong { color: var(--morado); }
-.nosotros {
-  background: white;
-  text-align: center;
-}
-.nosotros p { max-width: 760px; margin: auto; }
-.contacto {
-  text-align: center;
-  color: white;
-  background: linear-gradient(125deg, #5420b5, #e81789);
-}
-.contacto h2 { font-size: 2.2rem; }
-.contacto .boton { color: #157447; }
-footer {
-  text-align: center;
-  padding: 22px;
-  background: var(--oscuro);
-  color: white;
-}
-footer span { color: #ff9f43; }
-@media(max-width:600px) {
-  header { justify-content: center; text-align: center; }
-  nav { justify-content: center; gap: 12px; }
-  .hero { padding: 65px 6%; }
-  section { padding: 48px 6%; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="F&M Creativos: impresiones a color, papel fotográfico y adhesivo, piñatería, figuras en icopor y diseños personalizados.">
+  <title>F&M Creativos | Impresiones y diseños personalizados</title>
+  <style>
+    :root{--purple:#542080;--purple2:#7b2cbf;--pink:#f72585;--orange:#ff8c24;--ink:#24152e;--muted:#655a6d;--cream:#fff9ff;--white:#fff;--line:#eee2f3;--shadow:0 14px 38px rgba(64,20,88,.12)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background-color:var(--cream);background-image:linear-gradient(rgba(255,249,255,.88),rgba(255,249,255,.88)),url("https://fymcreativos-cyber.github.io/2.jpg");background-position:center center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .topbar{background:var(--purple);color:#fff;text-align:center;padding:8px 16px;font-size:.9rem}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1120px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--purple);font-size:1.05rem}
+    .brand img{width:auto;height:64px;max-width:180px;object-fit:contain;display:block}
+    .brand-fallback{display:none;font-size:1.15rem;line-height:1.1}
+    .brand-fallback span{color:var(--pink)}
+    nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:.94rem;font-weight:700}
+    nav a:hover{color:var(--pink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 20px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 9px 20px #32114b25}
+    .btn-primary{color:#fff;background:linear-gradient(110deg,var(--purple2),var(--pink))}
+    .btn-orange{color:#321c0c;background:var(--orange)}
+    .btn-light{background:rgba(255,255,255,.9);color:var(--purple);border:1px solid var(--line)}
+    .hero{overflow:hidden;background:radial-gradient(circle at 85% 20%,#ff8c2430,transparent 27%),radial-gradient(circle at 10% 90%,#f7258520,transparent 30%),rgba(255,255,255,.56);padding:76px 22px 70px}
+    .hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:48px}
+    .eyebrow{display:inline-block;padding:7px 13px;border-radius:999px;background:#f1dfff;color:var(--purple);font-weight:800;font-size:.82rem;letter-spacing:.04em}
+    h1{font-size:clamp(2.6rem,6vw,4.8rem);line-height:1.02;letter-spacing:-.045em;margin:18px 0}
+    h1 .gradient{background:linear-gradient(100deg,var(--purple),var(--pink),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:1.12rem;color:var(--muted);max-width:620px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .hero-art{position:relative;min-height:320px;display:grid;place-items:center}
+    .orbit{width:min(330px,78vw);aspect-ratio:1;border-radius:45% 55% 60% 40%;background:linear-gradient(145deg,#7b2cbf,#f72585 65%,#ff8c24);transform:rotate(-8deg);box-shadow:0 25px 65px #7b2cbf3b;display:grid;place-items:center}
+    .orbit-inner{width:76%;height:76%;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;padding:20px;transform:rotate(8deg)}
+    .orbit-inner strong{font-size:1.8rem;line-height:1.1;color:var(--purple)}
+    .orbit-inner span{display:block;color:var(--pink);font-weight:800;margin-top:10px}
+    .floating{position:absolute;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 16px;box-shadow:var(--shadow);font-weight:800}
+    .float-a{top:18px;right:0}.float-b{bottom:22px;left:0}
+    section{padding:72px 22px}
+    .section-inner{max-width:1120px;margin:auto}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 36px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:12px 0;color:var(--purple)}
+    .section-head p{color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:rgba(255,255,255,.91);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 5px 20px #38164d08}
+    .service-icon{width:54px;height:54px;border-radius:17px;background:#f4e4ff;display:grid;place-items:center;font-size:1.7rem;margin-bottom:16px}
+    .service:nth-child(3n+2) .service-icon{background:#ffe2f0}
+    .service:nth-child(3n) .service-icon{background:#fff0d9}
+    .service h3{margin:0 0 8px;color:var(--purple);font-size:1.2rem}
+    .service p{margin:0;color:var(--muted);font-size:.96rem}
+    .prices{background:rgba(255,255,255,.72)}
+    .price-note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:18px}
+    .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:auto}
+    .price-card{border:1px solid var(--line);border-radius:18px;padding:21px;background:linear-gradient(135deg,#fff,#fff8fe)}
+    .price-card h3{margin:0 0 12px;color:var(--purple)}
+    .price-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed #e9d9ef}
+    .price-row:last-child{border-bottom:0}
+    .price-row span{color:var(--muted)}
+    .price-row strong{white-space:nowrap;color:var(--pink)}
+    .gallery{background:rgba(248,237,255,.68)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery-tile{min-height:210px;border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;position:relative;background:linear-gradient(145deg,#542080,#f72585)}
+    .gallery-tile:nth-child(2){background:linear-gradient(145deg,#f72585,#ff8c24)}
+    .gallery-tile:nth-child(3){background:linear-gradient(145deg,#7b2cbf,#4cc9f0)}
+    .gallery-tile:nth-child(4){background:linear-gradient(145deg,#ff8c24,#f72585)}
+    .gallery-tile:nth-child(5){background:linear-gradient(145deg,#542080,#7b2cbf)}
+    .gallery-tile:nth-child(6){background:linear-gradient(145deg,#f72585,#7b2cbf)}
+    .gallery-tile:before{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff50;border-radius:50%;right:-45px;top:-55px;box-shadow:0 0 0 18px #ffffff10,0 0 0 36px #ffffff0b}
+    .gallery-tile .emoji{font-size:2.5rem;margin-bottom:10px;position:relative}
+    .gallery-tile h3,.gallery-tile p{position:relative;margin:0}
+    .gallery-tile p{opacity:.9;font-size:.92rem;margin-top:5px}
+    .about-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+    .about-card{border-radius:28px;background:linear-gradient(145deg,var(--purple),var(--pink));color:#fff;padding:34px;min-height:260px;display:flex;flex-direction:column;justify-content:center}
+    .about-card .big{font-size:3rem;line-height:1}
+    .about-card h3{font-size:1.7rem;margin:18px 0 8px}
+    .about-copy h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.1;color:var(--purple);margin:0 0 18px}
+    .about-copy p{color:var(--muted)}
+    .checks{padding:0;list-style:none;display:grid;gap:9px}
+    .checks li:before{content:"✓";display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#fce0ef;color:var(--pink);font-weight:900;margin-right:9px}
+    .contact{background:var(--purple);color:#fff}
+    .contact .section-head h2{color:#fff}
+    .contact .section-head p{color:#e9d9f2}
+    .contact-box{max-width:850px;margin:auto;background:#ffffff12;border:1px solid #ffffff25;border-radius:26px;padding:32px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px}
+    .contact-box h3{font-size:1.55rem;margin:0 0 8px}
+    .contact-box p{margin:0;color:#f0e3f6}
+    footer{background:#301044;color:#eadcf2;padding:24px 22px;text-align:center;font-size:.9rem}
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;z-index:20;background:#1fbf68;color:#fff;border-radius:999px;padding:14px 18px;font-weight:900;box-shadow:0 10px 25px #0002}
+    @media(max-width:800px){.nav{align-items:flex-start;flex-direction:column}.nav nav{gap:12px}.hero-inner,.about-wrap{grid-template-columns:1fr}.hero{padding-top:48px}.hero-art{min-height:280px}.services{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.contact-box{grid-template-columns:1fr}}
+    @media(max-width:520px){.brand img{height:54px}.services,.price-grid,.gallery-grid{grid-template-columns:1fr}section{padding:54px 16px}.hero{padding-left:16px;padding-right:16px}.nav{padding:10px 16px}.hero-art{min-height:260px}.float-a{right:0}.float-b{left:0}.price-row{font-size:.93rem}.contact-box{padding:23px}.whatsapp-float{right:12px;bottom:12px;padding:12px 14px}}
+  </style>
 </head>
 <body>
-<header>
-  <div class="logo">
-  <img src="2.jpg" alt="Logo F&M CREATIVOS"
-       style="height:65px; width:auto; max-width:180px; object-fit:contain;">
-</div>
-  <img src="2.jpg" alt="Logo F&M CREATIVOS"
-       style="height:65px; width:auto; max-width:180px; object-fit:contain;">
-</div>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#galeria">Galería</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+  <div class="topbar">✨ Ideas, color y creatividad para hacer realidad tus proyectos</div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#inicio" aria-label="F&M Creativos, inicio">
+        <img src="2.jpg" alt="Logo F&M CREATIVOS" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback">F<span>&amp;</span>M<br>CREATIVOS</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#nosotros">Nosotros</a>
+        <a class="btn btn-primary" href="https://wa.me/573504008268?text=Hola%20F%26M%20Creativos%2C%20quiero%20cotizar%20un%20trabajo" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-<section class="hero" id="inicio">
-  <div class="etiqueta">Creatividad, color y calidad</div>
-  <h1>¡Damos vida a tus ideas!</h1>
-  <p>En F&amp;M CREATIVOS convertimos tu imaginación en impresiones, detalles y creaciones personalizadas hechas con dedicación.</p>
-  <a class="boton" href="#servicios">Conoce nuestros servicios</a>
-  <a class="boton secundario" href="https://wa.me/573504008268" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
-</section>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">CREATIVIDAD QUE SE NOTA</span>
+          <h1>¡Dale vida a tus ideas con <span class="gradient">F&amp;M Creativos!</span></h1>
+          <p>Impresiones, diseños personalizados y creaciones hechas con imaginación y dedicación. Cuéntanos qué tienes en mente y te ayudamos a hacerlo realidad.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/573504008268?text=Hola%2C%20quiero%20cotizar%20un%20trabajo%20con%20F%26M%20Creativos" target="_blank" rel="noopener">💬 Cotiza tu pedido</a>
+            <a class="btn btn-light" href="#servicios">Conocer servicios ↓</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Creatividad y diseño">
+          <div class="orbit"><div class="orbit-inner"><div><strong>Tu idea,<br>nuestro arte</strong><span>IMPRESIONES · DISEÑO · CREATIVIDAD</span></div></div></div>
+          <div class="floating float-a">🌈 A todo color</div>
+          <div class="floating float-b">✂️ Hecho con creatividad</div>
+        </div>
+      </div>
+    </section>
 
-<section id="servicios">
-  <div class="titulo">
-    <h2>Nuestros servicios</h2>
-    <p>Soluciones creativas para tus ideas, celebraciones y negocios.</p>
-  </div>
-  <div class="servicios">
-    <article class="tarjeta">
-      <div class="emoji">🖨️</div>
-      <h3>Impresiones</h3>
-      <p>Impresiones a color para tus documentos, trabajos y proyectos.</p>
-    </article>
-    <article class="tarjeta">
-      <div class="emoji">📸</div>
-      <h3>Papel fotográfico y adhesivo</h3>
-      <p>Imprime tus diseños en papel fotográfico y adhesivo.</p>
-    </article>
-    <article class="tarjeta">
-      <div class="emoji">🎉</div>
-      <h3>Piñatería</h3>
-      <p>Ideas llenas de color para decorar tus celebraciones y momentos especiales.</p>
-    </article>
-    <article class="tarjeta">
-      <div class="emoji">🎨</div>
-      <h3>Arte en icopor</h3>
-      <p>Figuras y creaciones personalizadas para hacer realidad tus ideas.</p>
-    </article>
-    <article class="tarjeta">
-      <div class="emoji">🖼️</div>
-      <h3>Retratos y cuadros personalizados</h3>
-      <p>Detalles especiales creados a tu gusto para regalar o decorar.</p>
-    </article>
-    <article class="tarjeta">
-      <div class="emoji">💡</div>
-      <h3>Diseños creativos</h3>
-      <p>Cuéntanos qué tienes en mente y trabajemos juntos para darle forma.</p>
-    </article>
-  </div>
-</section>
+    <section id="servicios">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">LO QUE HACEMOS</span>
+          <h2>Servicios para dar forma a tus ideas</h2>
+          <p>Desde tus documentos impresos hasta detalles personalizados para celebraciones y regalos.</p>
+        </div>
+        <div class="services">
+          <article class="service"><div class="service-icon">🖨️</div><h3>Impresiones a color</h3><p>Impresión de documentos y trabajos a color para tus necesidades personales, escolares y comerciales.</p></article>
+          <article class="service"><div class="service-icon">📸</div><h3>Papel fotográfico y adhesivo</h3><p>Impresiones para fotografías, etiquetas, stickers y proyectos creativos.</p></article>
+          <article class="service"><div class="service-icon">🎉</div><h3>Piñatería</h3><p>Ideas coloridas y detalles para acompañar tus celebraciones y fechas especiales.</p></article>
+          <article class="service"><div class="service-icon">🎨</div><h3>Figuras en icopor</h3><p>Creaciones personalizadas para decorar, celebrar o darle un toque único a tus espacios.</p></article>
+          <article class="service"><div class="service-icon">🖼️</div><h3>Retratos y cuadros personalizados</h3><p>Diseños especiales para regalar, recordar momentos y decorar con un toque personal.</p></article>
+          <article class="service"><div class="service-icon">💼</div><h3>Publicidad impresa</h3><p>Tarjetas de presentación, tarjetas de lujo, volantes y avisos para dar a conocer tu negocio.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section class="galeria" id="galeria">
-  <div class="titulo">
-    <h2>Nuestra galería</h2>
-    <p>Algunas ideas de lo que podemos crear para ti.</p>
-  </div>
-  <div class="galeria-grid">
-    <div class="muestra"><span>🌈</span><strong>Impresiones a color</strong><p>Color para tus proyectos.</p></div>
-    <div class="muestra"><span>🎊</span><strong>Decoración y piñatería</strong><p>Detalles para celebrar.</p></div>
-    <div class="muestra"><span>✂️</span><strong>Creaciones en icopor</strong><p>Diseños hechos a tu gusto.</p></div>
-    <div class="muestra"><span>💝</span><strong>Detalles personalizados</strong><p>Regalos con significado.</p></div>
-  </div>
-  <p style="text-align:center;margin-top:25px">Pronto podremos agregar fotografías de tus trabajos reales.</p>
-</section>
+    <section class="prices" id="precios">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">SERVICIOS PERSONALIZADOS</span>
+          <h2>Cuéntanos qué necesitas</h2>
+          <p>Cada proyecto es diferente. Escríbenos para consultar opciones y recibir una cotización personalizada.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>🖨️ Impresiones</h3>
+            <p style="color:var(--muted);margin:0 0 14px">Impresiones a color, papel fotográfico y adhesivo para tus proyectos personales, escolares y comerciales.</p>
+            <a class="btn btn-primary" href="https://wa.me/573504008268?text=Hola%2C%20quiero%20cotizar%20unas%20impresiones" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </article>
+          <article class="price-card">
+            <h3>💼 Publicidad impresa</h3>
+            <p style="color:var(--muted);margin:0 0 14px">Tarjetas de presentación, tarjetas de lujo, volantes y avisos para promocionar tu negocio.</p>
+            <a class="btn btn-primary" href="https://wa.me/573504008268?text=Hola%2C%20quiero%20cotizar%20publicidad%20impresa" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </article>
+          <article class="price-card">
+            <h3>🎉 Piñatería y decoración</h3>
+            <p style="color:var(--muted);margin:0 0 14px">Detalles coloridos y creaciones para celebraciones y fechas especiales.</p>
+            <a class="btn btn-primary" href="https://wa.me/573504008268?text=Hola%2C%20quiero%20cotizar%20pi%C3%B1ater%C3%ADa" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </article>
+          <article class="price-card">
+            <h3>🎨 Diseños personalizados</h3>
+            <p style="color:var(--muted);margin:0 0 14px">Figuras en icopor, retratos y cuadros personalizados hechos a partir de tus ideas.</p>
+            <a class="btn btn-primary" href="https://wa.me/573504008268?text=Hola%2C%20quiero%20cotizar%20un%20dise%C3%B1o%20personalizado" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="nosotros" id="nosotros">
-  <div class="titulo"><h2>Sobre F&amp;M CREATIVOS</h2></div>
-  <p>Somos un espacio para la creatividad, la impresión y los detalles personalizados. Nos encanta ayudarte a transformar tus ideas en productos llenos de color y personalidad. ¡Tú imaginas, nosotros te ayudamos a crearlo!</p>
-</section>
+    <section class="gallery" id="galeria">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">INSPÍRATE</span>
+          <h2>Un espacio para tus ideas favoritas</h2>
+          <p>Estas secciones están listas para que más adelante agreguemos fotografías reales de tus trabajos.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-tile"><div class="emoji">🖨️</div><h3>Impresiones</h3><p>Color, calidad y cuidado en cada trabajo.</p></article>
+          <article class="gallery-tile"><div class="emoji">🎊</div><h3>Piñatería</h3><p>Detalles para celebrar momentos especiales.</p></article>
+          <article class="gallery-tile"><div class="emoji">✂️</div><h3>Figuras en icopor</h3><p>Creaciones con formas y personalidad.</p></article>
+          <article class="gallery-tile"><div class="emoji">🖼️</div><h3>Retratos personalizados</h3><p>Recuerdos diseñados especialmente para ti.</p></article>
+          <article class="gallery-tile"><div class="emoji">💌</div><h3>Tarjetas y volantes</h3><p>Ideas para presentar y promocionar tu negocio.</p></article>
+          <article class="gallery-tile"><div class="emoji">🌟</div><h3>Tu idea especial</h3><p>Cuéntanos qué te gustaría crear.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section class="contacto" id="contacto">
-  <h2>¡Hagamos realidad tus ideas!</h2>
-  <p>Solicita información o cotiza tu proyecto por WhatsApp.</p>
-  <a class="boton" href="https://wa.me/573504008268?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20F%26M%20CREATIVOS." target="_blank" rel="noopener">Contactar por WhatsApp</a>
-  <p>WhatsApp: 350 400 8268</p>
-</section>
-</main>
+    <section id="nosotros">
+      <div class="section-inner about-wrap">
+        <div class="about-card"><div class="big">💜 ✨</div><h3>Tu imaginación no tiene límites</h3><p>En F&amp;M Creativos nos encanta convertir ideas en trabajos llenos de color y personalidad.</p></div>
+        <div class="about-copy">
+          <span class="eyebrow">SOBRE F&amp;M CREATIVOS</span>
+          <h2>Creatividad para imprimir, decorar y regalar</h2>
+          <p>Queremos ayudarte a encontrar una solución creativa para tus proyectos: impresiones, publicidad para tu negocio, detalles personalizados y creaciones para ocasiones especiales.</p>
+          <ul class="checks">
+            <li>Atención directa para cotizar tu pedido.</li>
+            <li>Opciones para proyectos personales y comerciales.</li>
+            <li>Diseños personalizados según tu idea.</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/573504008268?text=Hola%20F%26M%20Creativos%2C%20quiero%20conocer%20sus%20servicios" target="_blank" rel="noopener">Hablemos de tu idea</a>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  © <span id="anio"></span> F&amp;M CREATIVOS. Hecho con creatividad y color.
-</footer>
-<script>
-document.getElementById("anio").textContent = new Date().getFullYear();
-</script>
+    <section class="contact" id="contacto">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow" style="background:#ffffff20;color:#fff">HABLEMOS</span>
+          <h2>¿Qué te gustaría crear hoy?</h2>
+          <p>Escríbenos, cuéntanos tu idea y solicita una cotización.</p>
+        </div>
+        <div class="contact-box">
+          <div><h3>F&amp;M CREATIVOS</h3><p>WhatsApp: 350 400 8268<br>Atención para cotizaciones y pedidos personalizados.</p></div>
+          <a class="btn btn-orange" href="https://wa.me/573504008268?text=Hola%20F%26M%20Creativos%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">💬 Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 F&amp;M Creativos · Impresiones, diseño y creatividad.</footer>
+  <a class="whatsapp-float" href="https://wa.me/573504008268?text=Hola%20F%26M%20Creativos%2C%20quiero%20cotizar" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp ↗</a>
 </body>
 </html>
