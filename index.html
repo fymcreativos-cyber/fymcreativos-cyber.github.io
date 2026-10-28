@@ -1,51 +1,464 @@
-<section class="gallery" id="galeria">
-  <div class="section-inner">
-    <div class="section-head">
-      <span class="eyebrow">NUESTROS TRABAJOS</span>
-      <h2>Galería de F&M Creativos</h2>
-      <p>Conoce nuestras creaciones y descubre ideas para tus proyectos.</p>
-    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F&M Creativos | Creamos tus ideas</title>
+<meta name="description" content="F&M Creativos: impresiones, fotocopias, piñatería, diseños y detalles personalizados.">
 
-    <div class="gallery-grid">
-      <article class="gallery-tile">
-        <div class="emoji">🖨️</div>
-        <h3>Impresiones</h3>
-        <p>Espacio para agregar fotos de impresiones.</p>
-      </article>
+<style>
+:root {
+  --purple: #7026a6;
+  --dark: #391052;
+  --pink: #ff4fa3;
+  --orange: #ffad32;
+  --cream: #fff8fd;
+  --text: #35253e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+a { text-decoration: none; }
+.topbar {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 9px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 18px #39105215;
+}
+.nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--purple);
+  font-weight: 900;
+  font-size: 21px;
+}
+.brand img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+nav { display: flex; flex-wrap: wrap; gap: 5px; }
+nav a {
+  padding: 9px 11px;
+  border-radius: 24px;
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: bold;
+}
+nav a:hover { background: #f4e4ff; color: var(--pink); }
 
-      <article class="gallery-tile">
-        <img
-          src="WhatsApp%20Image%202026-10-27%20at%205.37.53%20PM.jpeg"
-          alt="Unicornio personalizado para piñatería"
-          style="width:100%;height:190px;object-fit:cover;border-radius:12px;margin-bottom:12px;"
-        >
-        <h3>Piñatería</h3>
-        <p>Unicornios y detalles para celebrar momentos especiales.</p>
-      </article>
+.hero {
+  min-height: 510px;
+  padding: 80px 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 10% 20%, #ffc9e6 0, transparent 30%),
+    radial-gradient(circle at 90% 80%, #ffe1ad 0, transparent 30%),
+    linear-gradient(135deg, #f0ddff, #fff5fb, #fff0dc);
+}
+.hero-content { max-width: 800px; }
+.pill {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 30px;
+  background: #ead5ff;
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  color: var(--dark);
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+.hero h1 span { color: var(--pink); }
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  font-size: 18px;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.btn {
+  display: inline-block;
+  padding: 13px 23px;
+  border-radius: 30px;
+  font-weight: 800;
+  transition: .2s;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn-purple { background: var(--purple); color: white; }
+.btn-orange { background: var(--orange); color: var(--dark); }
 
-      <article class="gallery-tile">
-        <div class="emoji">✂️</div>
-        <h3>Figuras en icopor</h3>
-        <p>Espacio para agregar fotos de figuras en icopor.</p>
-      </article>
+section { padding: 75px 20px; scroll-margin-top: 95px; }
+.container { max-width: 1120px; margin: auto; }
+.heading { text-align: center; max-width: 720px; margin: 0 auto 38px; }
+.heading h2 {
+  color: var(--dark);
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.heading p { color: #75627e; }
+.services { background: white; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.card {
+  padding: 26px 22px;
+  border: 1px solid #efdef7;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 8px 25px #3910520d;
+}
+.service-card { text-align: center; background: var(--cream); }
+.icon {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+  background: #f0ddff;
+  border-radius: 22px;
+  font-size: 36px;
+}
+.card h3 { color: var(--purple); font-size: 20px; margin-bottom: 9px; }
+.card p { color: #75627e; font-size: 15px; }
 
-      <article class="gallery-tile">
-        <div class="emoji">🖼️</div>
-        <h3>Retratos personalizados</h3>
-        <p>Espacio para agregar fotos de retratos y cuadros.</p>
-      </article>
+.prices { background: linear-gradient(135deg, #fff0fa, #fff8fd); }
+.price-card h3 { font-size: 21px; }
+.price-tag {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 13px;
+  background: #fff0d7;
+  color: #754000;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.quote {
+  margin-top: 25px;
+  padding: 28px;
+  text-align: center;
+  background: white;
+  border: 1px dashed var(--pink);
+  border-radius: 20px;
+}
+.quote h3 { color: var(--purple); margin-bottom: 8px; }
+.quote p { margin-bottom: 18px; }
 
-      <article class="gallery-tile">
-        <div class="emoji">💌</div>
-        <h3>Tarjetas y volantes</h3>
-        <p>Espacio para agregar fotos de publicidad impresa.</p>
-      </article>
+.gallery { background: white; }
+.gallery-card { text-align: center; overflow: hidden; }
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.placeholder {
+  height: 220px;
+  display: grid;
+  place-items: center;
+  font-size: 58px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #ead5ff, #ffdced, #ffe8c6);
+}
+.gallery-card h3 { font-size: 19px; }
 
-      <article class="gallery-tile">
-        <div class="emoji">🌟</div>
-        <h3>Otros trabajos</h3>
-        <p>Un espacio para mostrar tus creaciones especiales.</p>
-      </article>
-    </div>
+.about { background: linear-gradient(135deg, #f0ddff, #fff0f7); }
+.about-box {
+  max-width: 850px;
+  margin: auto;
+  padding: 38px;
+  background: white;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px #39105212;
+}
+.about-emoji { font-size: 55px; }
+.about-box h3 { color: var(--purple); font-size: 25px; margin: 15px 0; }
+.about-box p { margin-bottom: 13px; color: #75627e; }
+
+.contact {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+}
+.contact .heading h2 { color: white; }
+.contact .heading p { color: #f1dfff; }
+.contact-info { margin: 20px 0 25px; line-height: 2; }
+footer {
+  background: #250b36;
+  color: #f1dfff;
+  text-align: center;
+  padding: 22px 15px;
+  font-size: 13px;
+}
+.whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  background: #20c966;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 35px;
+  box-shadow: 0 5px 18px #0002;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .nav { flex-direction: column; }
+  nav { justify-content: center; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  section { padding: 55px 15px; }
+  .grid { grid-template-columns: 1fr; }
+  .hero { padding: 60px 18px; }
+  .hero p { font-size: 16px; }
+  .about-box { padding: 26px 18px; }
+  nav a { padding: 8px; }
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">✨ CREATIVIDAD, COLOR Y DETALLES HECHOS PARA TI ✨</div>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#inicio">
+      <img src="2.jpg" alt="Logo F&M Creativos">
+      <span>F&M Creativos</span>
+    </a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </div>
-</section>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="pill">BIENVENIDOS A NUESTRO MUNDO CREATIVO</span>
+      <h1>Tu imaginación,<br><span>nuestra creatividad</span></h1>
+      <p>
+        En F&M Creativos convertimos tus ideas en detalles especiales.
+        Descubre nuestros diseños, impresiones, piñatería y mucho más.
+      </p>
+      <div class="actions">
+        <a class="btn btn-purple" href="#servicios">Descubrir servicios</a>
+        <a class="btn btn-orange" href="https://wa.me/573504008268">Hablemos por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="heading">
+        <span class="pill">LO QUE HACEMOS</span>
+        <h2>Nuestros servicios</h2>
+        <p>Soluciones creativas para tus proyectos, tus celebraciones y tu día a día.</p>
+      </div>
+      <div class="grid">
+        <article class="card service-card">
+          <div class="icon">🖨️</div>
+          <h3>Impresiones</h3>
+          <p>Impresiones de documentos, imágenes y trabajos personalizados.</p>
+        </article>
+        <article class="card service-card">
+          <div class="icon">📄</div>
+          <h3>Fotocopias</h3>
+          <p>Copias y apoyo para tus documentos y actividades.</p>
+        </article>
+        <article class="card service-card">
+          <div class="icon">🎨</div>
+          <h3>Diseños personalizados</h3>
+          <p>Diseños creativos para regalos, publicidad y ocasiones especiales.</p>
+        </article>
+        <article class="card service-card">
+          <div class="icon">🦄</div>
+          <h3>Piñatería</h3>
+          <p>Detalles y creaciones para hacer inolvidables tus celebraciones.</p>
+        </article>
+        <article class="card service-card">
+          <div class="icon">✂️</div>
+          <h3>Figuras en icopor</h3>
+          <p>Figuras decorativas para fiestas, eventos y proyectos especiales.</p>
+        </article>
+        <article class="card service-card">
+          <div class="icon">💡</div>
+          <h3>Tu idea especial</h3>
+          <p>Cuéntanos tu idea y busquemos juntos la mejor manera de hacerla realidad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="prices" id="precios">
+    <div class="container">
+      <div class="heading">
+        <span class="pill">PRECIOS Y COTIZACIONES</span>
+        <h2>Un presupuesto para tu idea</h2>
+        <p>Cuéntanos qué necesitas y te ayudaremos a conocer el valor de tu trabajo.</p>
+      </div>
+      <div class="grid">
+        <article class="card price-card">
+          <h3>🖨️ Impresiones y fotocopias</h3>
+          <p>El valor depende del tamaño, el color, el tipo de papel y la cantidad.</p>
+          <span class="price-tag">Consulta tu precio</span>
+        </article>
+        <article class="card price-card">
+          <h3>🎨 Diseños personalizados</h3>
+          <p>Cotización según el diseño, los detalles y las características solicitadas.</p>
+          <span class="price-tag">Cotiza tu diseño</span>
+        </article>
+        <article class="card price-card">
+          <h3>🎉 Piñatería y decoración</h3>
+          <p>Cuéntanos el tema de tu fiesta y qué detalles deseas preparar.</p>
+          <span class="price-tag">Cotiza tu celebración</span>
+        </article>
+        <article class="card price-card">
+          <h3>✨ Trabajos especiales</h3>
+          <p>Revisamos contigo los materiales y las características de tu proyecto.</p>
+          <span class="price-tag">Hablemos de tu idea</span>
+        </article>
+      </div>
+      <div class="quote">
+        <h3>¿Quieres una cotización personalizada?</h3>
+        <p>Escríbenos y cuéntanos qué deseas realizar.</p>
+        <a class="btn btn-purple" href="https://wa.me/573504008268?text=Hola%2C%20quiero%20cotizar%20un%20trabajo%20con%20F%26M%20Creativos.">Solicitar cotización</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="heading">
+        <span class="pill">NUESTROS TRABAJOS</span>
+        <h2>Galería creativa</h2>
+        <p>Un espacio para descubrir nuestras creaciones y compartir nuevas ideas.</p>
+      </div>
+      <div class="grid">
+        <article class="card gallery-card">
+          <div class="placeholder">🖨️</div>
+          <h3>Impresiones</h3>
+          <p>Trabajos de impresión y documentos.</p>
+        </article>
+        <article class="card gallery-card">
+          <img src="WhatsApp%20Image%202026-10-27%20at%205.37.53%20PM.jpeg" alt="Unicornio personalizado para piñatería" loading="lazy">
+          <h3>Piñatería</h3>
+          <p>Unicornios y detalles para celebraciones especiales.</p>
+        </article>
+        <article class="card gallery-card">
+          <div class="placeholder">✂️</div>
+          <h3>Figuras en icopor</h3>
+          <p>Decoraciones y figuras creativas.</p>
+        </article>
+        <article class="card gallery-card">
+          <div class="placeholder">🖼️</div>
+          <h3>Retratos personalizados</h3>
+          <p>Cuadros, retratos y diseños a tu gusto.</p>
+        </article>
+        <article class="card gallery-card">
+          <div class="placeholder">💌</div>
+          <h3>Tarjetas y volantes</h3>
+          <p>Diseños para comunicar y celebrar.</p>
+        </article>
+        <article class="card gallery-card">
+          <div class="placeholder">🌟</div>
+          <h3>Otros trabajos</h3>
+          <p>Más ideas y creaciones de F&M Creativos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="heading">
+        <span class="pill">CONÓCENOS</span>
+        <h2>Somos F&M Creativos</h2>
+        <p>Nos encanta dar vida a las ideas y crear detalles que emocionan.</p>
+      </div>
+      <div class="about-box">
+        <div class="about-emoji">💜✨</div>
+        <h3>Ideas que se convierten en detalles especiales</h3>
+        <p>En F&M Creativos queremos acompañarte en tus proyectos con creatividad, dedicación y atención personalizada.</p>
+        <p>Ofrecemos servicios de impresión, diseños, piñatería y propuestas especiales para tus necesidades.</p>
+        <p>Cuéntanos qué tienes en mente y conversemos sobre cómo hacerlo realidad.</p>
+        <br>
+        <a class="btn btn-purple" href="https://wa.me/573504008268">Conversemos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="heading">
+        <span class="pill">ESTAMOS PARA TI</span>
+        <h2>¡Hagamos algo increíble!</h2>
+        <p>Estamos listos para conocer tus ideas y ayudarte con tu próximo proyecto.</p>
+      </div>
+      <div class="contact-info">
+        <p><strong>F&M Creativos</strong></p>
+        <p>WhatsApp: 350 400 8268</p>
+        <p>¡Gracias por apoyar nuestro trabajo!</p>
+      </div>
+      <a class="btn btn-orange" href="https://wa.me/573504008268?text=Hola%2C%20F%26M%20Creativos.">💬 Escríbenos</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 F&M Creativos · Todos los derechos reservados.</p>
+  <p>Hecho con creatividad y cariño 💜</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573504008268" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+</body>
+</html>
